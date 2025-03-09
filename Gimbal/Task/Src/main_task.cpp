@@ -89,13 +89,13 @@ void MotorUpdate() {
             Roll_motor_ptr);
   switch (roll_mode) {
   case kRollMode_Fast:
-    spd_ref_ = 12.0f * reduce;
+    spd_ref_ = 6.0f * reduce;
     break;
   case kRollMode_Mid:
-    spd_ref_ = 6.0f * reduce;
+    spd_ref_ = 3.1415926f * reduce;
     break;
   case kRollMode_Slow:
-    spd_ref_ = 6.0f * reduce;
+    spd_ref_ = 3.1415926f * reduce;
     break;
   default:
     spd_ref_ = 0.0f;

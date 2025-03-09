@@ -48,7 +48,7 @@ float spd_ref_ = 0.0f;
 float spd_fdb_ = 0.0f;
 float cur_ref_ = 0.0f;
 float cur_fdb_ = 0.0f;
-float reduce = 2.4f;
+float reduce = 4.8f;
 
 uint32_t tick = 0;
 uint32_t stuck_tick = 0;
@@ -120,9 +120,9 @@ void MotorUpdate() // BLY
     if (rc_ptr->rc_rh() < 0.2f && rc_ptr->rc_rh() > -0.2f) {
       spd_ref_ = 0.0f;
     } else if (rc_ptr->rc_rh() > 0.2f) {
-      spd_ref_ = 5.0f * reduce * ((rc_ptr->rc_rh() - 0.2f) / 0.8f);
+      spd_ref_ = -1.0*5.0f * reduce * ((rc_ptr->rc_rh() - 0.2f) / 0.8f);
     } else if (rc_ptr->rc_rh() < -0.2f) {
-      spd_ref_ = 5.0f * reduce * ((rc_ptr->rc_rh() + 0.2f) / 0.8f);
+      spd_ref_ = -1.0*5.0f * reduce * ((rc_ptr->rc_rh() + 0.2f) / 0.8f);
     }
   }
 

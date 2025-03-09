@@ -65,6 +65,12 @@
         "stop_token": "cpp",
         "streambuf": "cpp",
         "thread": "cpp",
-        "variant": "cpp"
+        "variant": "cpp",
+        "iwdg.h": "c",
+        "can.h": "c",
+        "i2c.h": "c",
+        "tim.h": "c",
+        "dma.h": "c",
+        "spi.h": "c"
     }
 }
